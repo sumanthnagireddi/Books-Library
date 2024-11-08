@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=west" />
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="pt-8 px-12 ">
+        <a href="/api/books" class="flex items-center gap-4">
+            <span class="cursor-pointer material-symbols-outlined">
+                west
+            </span>
+            <span class="-mt-0.5 text-base text-gray-900"> Return to home page</span>
+        </a>
+    </div>
+    <section class="px-8 py-8 max-w-2xl mx-auto">
+        <div>
+            <h1 class="text-2xl font-medium text-gray-800">Publish a book</h1>
+            <p class="mt-1.5 text-sm text-gray-500">
+                Fill all the fields and submit to publish your book!!
+            </p>
+        </div>
+        <form class="space-y-4 mt-5" action="/api/books/createBook" method="POST">
+
+            <div class="col-span-6 sm:col-span-3">
+                <label for="title" class="block text-sm font-medium text-gray-700">
+                    Title
+                </label>
+                <input type="text" id="title" name="title"
+                    class="mt-1 w-full rounded-md border-gray-300 border py-1 bg-white text-sm text-gray-700 shadow-sm"
+                    required />
+            </div>
+            <div class="col-span-6 sm:col-span-3">
+                <label for="description" class="block text-sm font-medium text-gray-700">
+                    Description
+                </label>
+                <input type="text" id="description" name="description"
+                    class="mt-1 w-full rounded-md border-gray-300 border py-1 bg-white text-sm text-gray-700 shadow-sm"
+                    required />
+            </div>
+            <div class="col-span-6 sm:col-span-3">
+                <label for="author" class="block text-sm font-medium text-gray-700">
+                    Author
+                </label>
+                <input type="text" id="author" name="author"
+                    class="mt-1 w-full rounded-md border-gray-300 border py-1 bg-white text-sm text-gray-700 shadow-sm"
+                    required />
+            </div>
+            <div class="flex justify-end">
+                <button type="submit" class="bg-emerald-600 text-white px-4 py-1 rounded-lg my-2">Create Book</button>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>

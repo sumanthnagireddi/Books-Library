@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=west" />
+    <title>
+        <%= data?.title %>
+    </title>
+</head>
+
+<body>
+    <div class="pt-8 pb-6 px-12 flex justify-between items-center">
+        <a href="/api/books" class="flex items-center gap-4">
+            <span class="cursor-pointer material-symbols-outlined">
+                west
+            </span>
+            <span class="-mt-0.5 text-base text-gray-900"> Return to home page</span>
+        </a>
+        <div class="flex gap-4 items-center">
+       
+            <a href="/api/books/delete/<%= data?.id %>" class="text-red-600 text-sm bg-red-100 px-4 py-0.5 rounded-lg cursor-pointer font-medium">Delete</a>
+        </div>
+    </div>
+    <section class="py-4  px-16">
+        <div class="flex ">
+
+            <div class="pl-4 -mt-1 ">
+                <p class=" text-xl  font-medium">
+                    <%= data?.title %>
+                </p>
+                <div class="flex gap-4 items-center">
+                    <p class="text-sm text-gray-600 py-2">Written by : <span class="font-medium text-emerald-600">
+                            <%= data.author %>
+                        </span></p>
+                    <p class="text-sm text-gray-600 py-2">Published On: <span class="font-medium text-emerald-600">
+                            <%= data.date %>
+                        </span></p>
+
+                </div>
+                <p>
+                    <%= data.description %>
+                </p>
+
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
